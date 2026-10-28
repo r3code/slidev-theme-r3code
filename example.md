@@ -5,6 +5,7 @@ info: |
   Демо-колода темы r3code-tech.
   Инженерный стиль: чёрный на белом, тёмные разделители, ProgressiveList, 8 layouts.
 class: text-center
+favicon: /favicon.svg
 fonts:
   sans: 'Noto Sans'
   mono: 'Fira Code'

@@ -155,8 +155,9 @@ slidev-theme-r3code/
 │   ├── image-full.vue
 │   ├── stat.vue
 │   └── quote.vue
-├── public/              # Бренд-логотип
-│   └── r3code-logo.png  # Квадратный, с белым фоном — одинаков для обеих тем
+├── public/              # Бренд-логотип + favicon
+│   ├── r3code-logo.png  # Квадратный, с белым фоном — одинаков для обеих тем
+│   └── favicon.svg      # Векторный favicon (T + синий swoosh)
 ├── setup/               # Хуки Slidev
 │   └── shiki.ts         # Тема подсветки кода (vitesse-light/dark)
 ├── styles/              # Стили темы

@@ -39,6 +39,7 @@
   "scripts": {
     "build": "slidev build example.md",
     "build:pages": "slidev build example.md --base /slidev-theme-r3code/ --without-notes",
+    "contrast": "node scripts/check-contrast.mjs",
     "dev": "slidev example.md --open",
     "export": "slidev export example.md",
     "export:pdf": "slidev export example.md --format pdf --with-clicks --wait-until networkidle --wait 1500",

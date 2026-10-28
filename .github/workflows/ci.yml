@@ -35,6 +35,9 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Contrast (WCAG AA)
+        run: npm run contrast
+
   build:
     name: Build example.md
     runs-on: ubuntu-latest
