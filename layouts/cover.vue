@@ -8,6 +8,13 @@
 //
 // Логотип по умолчанию: /r3code-logo.png (квадратный, с белым фоном,
 // одинаково читается в светлой и тёмной теме).
+//
+// ВАЖНО: пути к картинкам из public/ резолвятся через resolveAssetUrl,
+// чтобы работали с --base /slidev-theme-r3code/ на GitHub Pages.
+// Без этого /r3code-logo.png ведёт на https://r3code.github.io/r3code-logo.png
+// вместо https://r3code.github.io/slidev-theme-r3code/r3code-logo.png
+
+import { resolveAssetUrl } from '../layoutHelper'
 
 const props = defineProps<{
   coverImage?: string
@@ -17,8 +24,8 @@ const props = defineProps<{
 
 function logoUrl(): string | null {
   if (props.logo === false) return null
-  if (typeof props.logo === 'string') return props.logo
-  if (props.logo === true) return '/r3code-logo.png'
+  if (typeof props.logo === 'string') return resolveAssetUrl(props.logo)
+  if (props.logo === true) return resolveAssetUrl('/r3code-logo.png')
   return null
 }
 </script>
@@ -27,7 +34,7 @@ function logoUrl(): string | null {
   <div class="slidev-layout cover relative">
     <!-- Фоновое изображение справа (половина слайда) -->
     <div v-if="coverImage" class="absolute right-0 top-0 bottom-0 w-1/2 h-full">
-      <img :src="coverImage" class="w-full h-full object-cover" alt="Фон презентации">
+      <img :src="resolveAssetUrl(coverImage)" class="w-full h-full object-cover" alt="Фон презентации">
     </div>
 
     <!-- Логотип в правом верхнем углу (один файл для обеих тем) -->
