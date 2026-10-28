@@ -1,0 +1,241 @@
+/* ─── r3code-tech: типографика и базовые стили ──────────────────────────────
+ * Заголовки:  Noto Sans 32pt (cover 28pt)
+ * Основной:   Noto Sans 20pt, line-height 1.3
+ * Код:        Fira Code 16pt
+ * Буллеты:    heavy round arrow 24pt
+ * Таблицы:    16pt, padding 0.4em 0.6em
+ * ──────────────────────────────────────────────────────────────────────────
+ */
+
+/* ─── ЖЁСТКО: весь текст одного цвета (КРОМЕ code-блоков — там подсветка shiki) ── */
+
+.slidev-layout,
+.slidev-layout *:not(.shiki):not(.shiki *):not(pre):not(pre *):not(.slidev-code):not(.slidev-code *),
+.slidev-layout *::before,
+.slidev-layout *::after,
+.slidev-layout.prose,
+.slidev-layout.prose *:not(.shiki):not(.shiki *):not(pre):not(pre *):not(.slidev-code):not(.slidev-code *),
+.slidev-layout.prose *::before,
+.slidev-layout.prose *::after,
+.slidev-page,
+.slidev-page *:not(.shiki):not(.shiki *):not(pre):not(pre *):not(.slidev-code):not(.slidev-code *),
+.slidev-page *::before,
+.slidev-page *::after,
+.slidev-page-wrapper,
+.slidev-page-wrapper *:not(.shiki):not(.shiki *):not(pre):not(pre *):not(.slidev-code):not(.slidev-code *) {
+  color: var(--vi-text) !important;
+}
+
+/* Slidev default даёт первому параграфу opacity. Убираем,
+   НО не трогаем v-click скрытые элементы. */
+.slidev-layout > p:not(.slidev-vclick-hidden),
+.slidev-layout > p:first-child:not(.slidev-vclick-hidden),
+.slidev-layout > p:first-of-type:not(.slidev-vclick-hidden),
+.slidev-layout.prose > p:not(.slidev-vclick-hidden),
+.slidev-layout.prose > p:first-child:not(.slidev-vclick-hidden),
+.slidev-layout.prose > p:first-of-type:not(.slidev-vclick-hidden),
+.slidev-layout p:not(.slidev-vclick-hidden),
+.slidev-layout.prose p:not(.slidev-vclick-hidden) {
+  color: var(--vi-text) !important;
+  opacity: 1 !important;
+}
+
+/* v-click: скрытые элементы ДОЛЖНЫ быть скрыты */
+.slidev-vclick-hidden {
+  display: none !important;
+}
+
+/* Инлайн-код — одного цвета с текстом, на фоне кода, 16pt */
+.slidev-layout :not(pre) > code,
+.slidev-layout.prose :not(pre) > code {
+  color: var(--vi-text) !important;
+  background: var(--vi-code-bg) !important;
+  padding: 0.1em 0.35em !important;
+  border-radius: 0.25em !important;
+  font-size: 16pt !important;
+  font-family: 'Fira Code', monospace !important;
+}
+
+/* ─── Размеры шрифтов + line-height 1.3 ──────────────────────────────── */
+
+.slidev-layout,
+.slidev-layout p,
+.slidev-layout li,
+.slidev-layout td,
+.slidev-layout th,
+.slidev-layout.prose p,
+.slidev-layout.prose li,
+.slidev-layout.prose td,
+.slidev-layout.prose th,
+.slidev-layout.prose {
+  font-size: 20pt !important;
+  line-height: 1.3 !important;
+  font-family: 'Noto Sans', 'Arial', sans-serif !important;
+}
+
+.slidev-layout li,
+.slidev-layout.prose li {
+  margin-bottom: 0.5em !important;
+}
+
+.slidev-layout h1,
+.slidev-layout.prose h1 {
+  font-size: 32pt !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  font-family: 'Noto Sans', 'Arial', sans-serif !important;
+  margin-bottom: 0.5em !important;
+}
+
+.slidev-layout h2,
+.slidev-layout.prose h2 {
+  font-size: 28pt !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  font-family: 'Noto Sans', 'Arial', sans-serif !important;
+  margin-bottom: 0.4em !important;
+}
+
+.slidev-layout h3,
+.slidev-layout.prose h3 {
+  font-size: 24pt !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  font-family: 'Noto Sans', 'Arial', sans-serif !important;
+}
+
+/* ─── КОД: Fira Code 16pt ────────────────────────────────────────────── */
+
+.slidev-layout pre,
+.slidev-layout pre.slidev-code,
+.slidev-layout .slidev-code,
+.slidev-layout .shiki,
+.slidev-layout.shiki,
+.slidev-layout.prose pre,
+.slidev-layout.prose pre.slidev-code,
+.slidev-layout.prose .slidev-code,
+.slidev-layout.prose .shiki {
+  font-family: 'Fira Code', monospace !important;
+  font-size: 16pt !important;
+  line-height: 1.3 !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  background: var(--vi-code-bg) !important;
+  padding: 0.75em 1em !important;
+  border-radius: 0.5em !important;
+}
+
+.slidev-layout pre,
+.slidev-layout.prose pre,
+.slidev-layout pre[class*="language-"],
+.slidev-layout.prose pre[class*="language-"],
+.slidev-layout code[class*="language-"],
+.slidev-layout.prose code[class*="language-"] {
+  font-family: 'Fira Code', monospace !important;
+  font-size: 16pt !important;
+  line-height: 1.3 !important;
+}
+
+.slidev-layout pre code,
+.slidev-layout .slidev-code code,
+.slidev-layout .shiki code,
+.slidev-layout .shiki span,
+.slidev-layout .shiki span span,
+.slidev-layout.prose pre code,
+.slidev-layout.prose .slidev-code code,
+.slidev-layout.prose .shiki code,
+.slidev-layout.prose .shiki span,
+.slidev-layout.prose .shiki span span {
+  font-family: 'Fira Code', monospace !important;
+  font-size: 16pt !important;
+  line-height: 1.3 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+}
+
+.slidev-layout pre *,
+.slidev-layout.prose pre *,
+.slidev-layout .slidev-code *,
+.slidev-layout.prose .slidev-code *,
+.slidev-layout .shiki *,
+.slidev-layout.prose .shiki * {
+  font-size: 16pt !important;
+}
+
+/* ─── Плейсхолдеры ───────────────────────────────────────────────────── */
+.slidev-layout .bg-gray-200 { background-color: var(--vi-placeholder-bg) !important; }
+.slidev-layout .border-dashed { border-style: dashed !important; }
+.slidev-layout .border-2 { border-width: 2px !important; }
+.slidev-layout .border-gray-400 { border-color: var(--vi-placeholder-border) !important; }
+
+/* ─── Изображения ────────────────────────────────────────────────────── */
+.slidev-layout img {
+  max-width: 100%;
+  height: auto;
+}
+.slidev-layout img.object-cover,
+.slidev-layout img[class*="object-cover"] {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ─── Таблицы ────────────────────────────────────────────────────────── */
+.slidev-layout table,
+.slidev-layout.prose table {
+  font-size: 16pt !important;
+  border-collapse: collapse !important;
+  width: 100% !important;
+}
+.slidev-layout th,
+.slidev-layout td,
+.slidev-layout.prose th,
+.slidev-layout.prose td {
+  padding: 0.4em 0.6em !important;
+  border-bottom: 1px solid var(--vi-table-border) !important;
+  text-align: left !important;
+  line-height: 1.3 !important;
+}
+.slidev-layout th,
+.slidev-layout.prose th {
+  background: var(--vi-table-header-bg) !important;
+  font-weight: 600 !important;
+}
+
+/* ─── KPI-цифры (layout: stat) ──────────────────────────────────────── */
+.slidev-layout .text-5xl,
+.slidev-layout.stat .big-number {
+  font-size: 48pt !important;
+  line-height: 1 !important;
+  font-weight: 700 !important;
+  font-family: 'Noto Sans', 'Arial', sans-serif !important;
+}
+
+/* ─── Вспомогательные классы ────────────────────────────────────────── */
+.slidev-layout .text-black { color: var(--vi-text) !important; }
+.slidev-layout .font-bold { font-weight: 700 !important; }
+
+/* ─── Подсветка кода: усилить контраст ──────────────────────────────── */
+/* Shiki использует CSS-переменные --shiki-light/--shiki-dark в inline style */
+/* Строковые значения в YAML: #B56959 (красно-коричневый) → ярко-синий */
+.slidev-layout .shiki span[style*="B56959"],
+.slidev-layout .shiki span[style*="b56959"] {
+  --shiki-light: #0550ae !important;
+  --shiki-dark: #4493f8 !important;
+  opacity: 1 !important;
+}
+
+/* ─── Скрыть счётчик страниц при экспорте ───────────────────────────── */
+.slidev-progress,
+.slidev-page-number,
+.slidev-clicks-indicator {
+  display: none !important;
+}
+
+.slidev-layout footer,
+.slidev-page-no {
+  display: none !important;
+}

@@ -1,0 +1,13 @@
+node_modules
+.DS_Store
+dist
+*.local
+index.html
+.remote-assets
+components.d.ts
+.vscode/
+.idea/
+example-export.pdf
+example-export/
+example-export-dark/
+slides-png/

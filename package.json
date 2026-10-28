@@ -1,0 +1,72 @@
+{
+  "name": "slidev-theme-r3code-tech",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "r3code-tech — инженерная тема для Slidev: чёрный текст на белом, тёмные разделители с инверсией в dark mode, Noto Sans + Fira Code, ProgressiveList с v-click, 8 layouts для докладов SRE/DevOps",
+  "author": "Dmitry Sinyavsky (https://t.me/letitkit)",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/r3code/slidev-theme-r3code#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r3code/slidev-theme-r3code.git"
+  },
+  "bugs": {
+    "url": "https://github.com/r3code/slidev-theme-r3code/issues"
+  },
+  "keywords": [
+    "slidev-theme",
+    "slidev",
+    "r3code",
+    "sre",
+    "devops",
+    "engineering",
+    "tech-talks"
+  ],
+  "files": [
+    "components",
+    "example.md",
+    "layouts",
+    "public",
+    "setup",
+    "styles",
+    "uno.config.ts"
+  ],
+  "engines": {
+    "node": "^22.0.0 || ^24.0.0 || >=26.0.0",
+    "slidev": ">=52.0.0"
+  },
+  "scripts": {
+    "build": "slidev build example.md",
+    "build:pages": "slidev build example.md --base /slidev-theme-r3code/ --without-notes",
+    "dev": "slidev example.md --open",
+    "export": "slidev export example.md",
+    "export:pdf": "slidev export example.md --format pdf --with-clicks --wait-until networkidle --wait 1500",
+    "lint": "node scripts/lint-theme.mjs",
+    "screenshot": "slidev export example.md --format png --per-slide --wait-until networkidle --wait 1500"
+  },
+  "dependencies": {
+    "@fontsource/fira-code": "^5.3.0",
+    "@fontsource/noto-sans": "^5.3.0",
+    "@slidev/types": "^52.0.0"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.0.0",
+    "@slidev/theme-default": "latest",
+    "playwright-chromium": "^1.40.0"
+  },
+  "slidev": {
+    "colorSchema": "both",
+    "highlighter": "shiki",
+    "defaults": {
+      "fonts": {
+        "sans": "Noto Sans",
+        "mono": "Fira Code",
+        "weights": "400,700",
+        "italic": false,
+        "provider": "none",
+        "local": "Noto Sans, Fira Code"
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+/* ─── r3code-tech: бренд-токены ────────────────────────────────────────────
+ * Принцип: чёрный текст на белом фоне, никаких цветовых акцентов.
+ * Разделители (bg-black) — всегда контрастные:
+ *   светлая тема → чёрный фон + белый текст
+ *   тёмная тема  → белый фон + чёрный текст (инверсия, чтобы не сливалось)
+ *
+ * Шрифты: Noto Sans (body) + Fira Code (code). Self-hosted через @fontsource.
+ * ──────────────────────────────────────────────────────────────────────────
+ */
+
+:root {
+  /* ── Нейтральная база (light) ────────────────────────────────────────── */
+  --vi-text: #000;
+  --vi-text-on-dark: #fff;
+  --vi-code-bg: #f3f4f6;
+  --vi-table-border: #e5e7eb;
+  --vi-table-header-bg: #f9fafb;
+  --vi-placeholder-bg: #e5e7eb;
+  --vi-placeholder-border: #9ca3af;
+  --vi-version-color: #374151;
+
+  /* ── Маппинг на переменные ядра Slidev ───────────────────────────────── */
+  --slidev-theme-primary: #000;
+  --slidev-code-background: var(--vi-code-bg);
+  --slidev-code-line-number-color: #6b7280;
+}
+
+html.dark {
+  /* ── Нейтральная база (dark) ─────────────────────────────────────────── */
+  --vi-text: #fff;
+  --vi-text-on-dark: #000;
+  --vi-code-bg: #1f2937;
+  --vi-table-border: #374151;
+  --vi-table-header-bg: #1f2937;
+  --vi-placeholder-bg: #374151;
+  --vi-placeholder-border: #6b7280;
+  --vi-version-color: #9ca3af;
+
+  --slidev-theme-primary: #fff;
+  --slidev-code-background: var(--vi-code-bg);
+  --slidev-code-line-number-color: #9ca3af;
+}
+
+/* ── Фон и цвет текста страницы ──────────────────────────────────────────── */
+html {
+  background: #fff;
+  color: var(--vi-text);
+}
+html.dark {
+  background: #000;
+}

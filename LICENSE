@@ -1,0 +1,81 @@
+# Лицензия slidev-theme-r3code
+
+Copyright © 2026 Дмитрий Синявский (Dmitry Sinyavsky), https://t.me/letitkit
+
+    Required Notice: Copyright © 2026 Дмитрий Синявский (https://t.me/letitkit)
+
+## PolyForm Noncommercial 1.0.0
+
+Полный текст лицензии: https://polyformproject.org/licenses/noncommercial/1.0.0
+
+### Коротко (не заменяет текст лицензии)
+
+Этим можно пользоваться, менять и распространять для любой некоммерческой цели —
+личные проекты, учёба, исследования, некоммерческие организации, госучреждения.
+Доклад на внутреннем митапе или на конференции без оплаты за выступление —
+некоммерческое использование. Слайды, сделанные в рамках оплачиваемой работы,
+продукта или продажи — коммерческое, и требует отдельной письменной лицензии
+от автора. Гарантий никаких.
+
+При распространении копии или производной работы вы обязаны передать дальше
+и текст лицензии, и строку `Required Notice` выше.
+
+---
+
+## Полный текст PolyForm Noncommercial License 1.0.0
+
+<https://polyformproject.org/licenses/noncommercial/1.0.0>
+
+```
+PolyForm Noncommercial License 1.0.0
+
+<https://polyformproject.org/licenses/noncommercial/1.0.0>
+
+Copyright (c) 2026 Дмитрий Синявский (Dmitry Sinyavsky)
+
+You may not use this software in any manner that is primarily
+intended for or directed toward commercial advantage or monetary
+compensation, unless you have obtained a separate license for
+such use from the copyright holder.
+
+Subject to the foregoing condition and the following terms, you
+may use, copy, modify, and distribute this software for any
+noncommercial purpose.
+
+1. Source Code. You may use, copy, modify, and distribute this
+   software in source code form.
+
+2. Object Code. You may use, copy, modify, and distribute this
+   software in compiled or object code form.
+
+3. Distribution. You must give any other recipients of the work
+   or contribution a copy of this license and the copyright
+   notice above.
+
+4. Patent License. To the extent that this software is covered
+   by patents, the copyright holder grants you a nonexclusive,
+   worldwide, royalty-free patent license to make, use, sell,
+   offer for sale, import, and otherwise transfer this software
+   and copies of this software, for the duration of the patent
+   license, solely to the extent that the patent license covers
+   this software and no other patents.
+
+5. Disclaimer. This software is provided "as is," without
+   warranty of any kind, express or implied, including but not
+   limited to the warranties of merchantability, fitness for a
+   particular purpose, and noninfringement. In no event will the
+   copyright holder be liable for any claim, damages, or other
+   liability, whether in an action of contract, tort, or
+   otherwise, arising from, out of, or in connection with this
+   software or the use or other dealings in this software.
+
+6. Termination. This license terminates automatically if you
+   breach any term of this license. The copyright holder may
+   also terminate this license at any time by notice to you.
+
+7. Survival. Sections 4, 5, and 6 survive termination of this
+   license.
+
+8. Entire Agreement. This license is the entire agreement
+   between you and the copyright holder concerning this software.
+```
