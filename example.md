@@ -318,7 +318,7 @@ routeAlias: questions
 
 <div class="text-2xl mt-8">
   <p>Дмитрий Синявский</p>
-  <p class="text-xl opacity-70 mt-4">SRE · Ви.Tech</p>
+  <p class="text-xl opacity-70 mt-4">SRE</p>
   <p class="text-xl mt-4">t.me/letitkit</p>
 </div>
 
