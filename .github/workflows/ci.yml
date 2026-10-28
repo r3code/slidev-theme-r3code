@@ -84,6 +84,10 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+    # continue-on-error: GitHub Pages должен быть включён в настройках репо
+    # (Settings → Pages → Source: GitHub Actions). Пока не включён — деплой упадёт,
+    # но это не должен ломать весь CI.
+    continue-on-error: true
     steps:
       - uses: actions/checkout@v5
 

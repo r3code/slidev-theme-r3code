@@ -2,9 +2,12 @@
 // Обложка доклада.
 // Frontmatter-опции:
 //   coverImage: '/images/bg.jpg'    — фоновое изображение справа
-//   logo: true                      — показать логотип Ви.Tech в углу
-//   logoSrc: '/images/custom.svg'   — свой логотип
+//   logo: true                      — показать логотип r3code в углу
+//   logoSrc: '/images/custom.png'   — свой логотип (overrides default)
 //   version: '20261028 rev. abc123' — строка версии в нижнем правом углу
+//
+// Логотип по умолчанию: /r3code-logo.png (квадратный, с белым фоном,
+// одинаково читается в светлой и тёмной теме).
 
 const props = defineProps<{
   coverImage?: string
@@ -15,7 +18,7 @@ const props = defineProps<{
 function logoUrl(): string | null {
   if (props.logo === false) return null
   if (typeof props.logo === 'string') return props.logo
-  if (props.logo === true) return '/vitech-logo-white-tech.svg'
+  if (props.logo === true) return '/r3code-logo.png'
   return null
 }
 </script>
@@ -27,15 +30,15 @@ function logoUrl(): string | null {
       <img :src="coverImage" class="w-full h-full object-cover" alt="Фон презентации">
     </div>
 
-    <!-- Логотип в правом верхнем углу -->
+    <!-- Логотип в правом верхнем углу (один файл для обеих тем) -->
     <div
       v-if="logoUrl()"
       class="absolute z-20"
-      style="top: 30px; right: 30px; height: 50px;"
+      style="top: 30px; right: 30px; height: 50px; width: 50px;"
     >
       <img
         :src="logoUrl()"
-        style="height: 50px !important; width: auto !important; display: block;"
+        style="height: 50px !important; width: 50px !important; object-fit: contain; display: block;"
         alt="Логотип"
       >
     </div>

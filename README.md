@@ -53,6 +53,8 @@ Slidev разворачивает `r3code-tech` в имя пакета `slidev-t
 | `stat` | Крупная KPI-цифра | `number:`, `label:` |
 | `quote` | Центрированная цитата | `author:` |
 
+> Логотип `r3code-logo.png` (в `public/`) — квадратный, с белым фоном, одинаково читается в светлой и тёмной теме. Один файл на обе темы.
+
 ## Компоненты
 
 Автоимпортируются, доступны в любом слайде без импорта:
@@ -153,9 +155,8 @@ slidev-theme-r3code/
 │   ├── image-full.vue
 │   ├── stat.vue
 │   └── quote.vue
-├── public/              # Бренд-логотипы
-│   ├── vitech-logo-white-tech.svg
-│   └── vitech-logo-black-tech.svg
+├── public/              # Бренд-логотип
+│   └── r3code-logo.png  # Квадратный, с белым фоном — одинаков для обеих тем
 ├── setup/               # Хуки Slidev
 │   └── shiki.ts         # Тема подсветки кода (vitesse-light/dark)
 ├── styles/              # Стили темы
