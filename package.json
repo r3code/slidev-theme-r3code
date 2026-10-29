@@ -1,7 +1,7 @@
 {
   "name": "slidev-theme-r3code-tech",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "r3code-tech — инженерная тема для Slidev: чёрный текст на белом, тёмные разделители с инверсией в dark mode, Noto Sans + Fira Code, ProgressiveList с v-click, 8 layouts для докладов SRE/DevOps",
   "author": "Dmitry Sinyavsky (https://t.me/letitkit)",
@@ -26,6 +26,7 @@
   "files": [
     "components",
     "example.md",
+    "layoutHelper.ts",
     "layouts",
     "public",
     "setup",
